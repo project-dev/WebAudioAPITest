@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Web Audio API Test</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<script src="./js/game.audio.js"></script>
+	<script>
+		'use strict';
+		window.addEventListener("load", function(e){
+			loadSound("OPENING_01", "./audio/OPENING_01.mp3");
+			var btnReady = document.getElementById("ready");
+			btnReady.addEventListener("click", function(e){
+				playSound("OPENING_01", true);
+			});
+		});
+	</script>
+</head>
+<body>
+	<input type="button" id="ready" value="ready">
+</body>
+</html>
